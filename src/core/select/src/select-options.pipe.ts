@@ -1,7 +1,7 @@
 import { Pipe, PipeTransform } from '@angular/core';
 import { Observable, of as observableOf } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { FormlyFieldConfig } from '@ngx-formly/core';
+import { FormlyFieldConfig } from '@ruslanguns/core';
 
 @Pipe({ name: 'formlySelectOptions' })
 export class FormlySelectOptionsPipe implements PipeTransform {

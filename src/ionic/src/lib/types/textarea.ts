@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FieldType } from '@ngx-formly/core';
+import { FieldType } from '@ruslanguns/core';
 
 @Component({
   selector: 'formly-field-ion-textarea',
@@ -13,4 +13,4 @@ import { FieldType } from '@ngx-formly/core';
   `,
   styles: [':host { display: inherit; }'],
 })
-export class FormlyFieldTextArea extends FieldType {}
+export class FormlyFieldTextArea extends FieldType { }

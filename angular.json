@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "@ngx-formly-demo": {
+    "@ruslanguns-demo": {
       "root": "",
       "sourceRoot": "demo/src",
       "projectType": "application",
@@ -48,18 +48,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "@ngx-formly-demo:build"
+            "browserTarget": "@ruslanguns-demo:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "@ngx-formly-demo:build:production"
+              "browserTarget": "@ruslanguns-demo:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "@ngx-formly-demo:build"
+            "browserTarget": "@ruslanguns-demo:build"
           }
         },
         "test": {
@@ -93,7 +93,7 @@
         }
       }
     },
-    "@ngx-formly-demo-e2e": {
+    "@ruslanguns-demo-e2e": {
       "root": "",
       "sourceRoot": "",
       "projectType": "application",
@@ -102,7 +102,7 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "./protractor.conf.js",
-            "devServerTarget": "@ngx-formly-demo:serve"
+            "devServerTarget": "@ruslanguns-demo:serve"
           }
         },
         "lint": {
@@ -118,7 +118,7 @@
         }
       }
     },
-    "@ngx-formly/core": {
+    "@ruslanguns/core": {
       "root": "src/core",
       "sourceRoot": "src/core",
       "projectType": "library",
@@ -158,7 +158,7 @@
         }
       }
     },
-    "@ngx-formly/bootstrap": {
+    "@ruslanguns/bootstrap": {
       "root": "src/bootstrap",
       "sourceRoot": "src/bootstrap/src",
       "projectType": "library",
@@ -198,7 +198,7 @@
         }
       }
     },
-    "@ngx-formly/ionic": {
+    "@ruslanguns/ionic": {
       "root": "src/ionic",
       "sourceRoot": "src/ionic/src",
       "projectType": "library",
@@ -238,7 +238,7 @@
         }
       }
     },
-    "@ngx-formly/kendo": {
+    "@ruslanguns/kendo": {
       "root": "src/kendo",
       "sourceRoot": "src/kendo/src",
       "projectType": "library",
@@ -278,7 +278,7 @@
         }
       }
     },
-    "@ngx-formly/material": {
+    "@ruslanguns/material": {
       "root": "src/material",
       "sourceRoot": "src/material/src",
       "projectType": "library",
@@ -318,7 +318,7 @@
         }
       }
     },
-    "@ngx-formly/primeng": {
+    "@ruslanguns/primeng": {
       "root": "src/primeng",
       "sourceRoot": "src/primeng/src",
       "projectType": "library",
@@ -358,7 +358,7 @@
         }
       }
     },
-    "@ngx-formly/nativescript": {
+    "@ruslanguns/nativescript": {
       "root": "src/nativescript",
       "sourceRoot": "src/nativescript/src",
       "projectType": "library",
@@ -399,7 +399,7 @@
       }
     }
   },
-  "defaultProject": "@ngx-formly-demo",
+  "defaultProject": "@ruslanguns-demo",
   "cli": {
     "packageManager": "yarn"
   },

@@ -18,8 +18,8 @@
       "es2015"
     ],
     "paths": {
-      "@ngx-formly/*": [
-        "dist/@ngx-formly/*"
+      "@ruslanguns/*": [
+        "dist/@ruslanguns/*"
       ]
     }
   },

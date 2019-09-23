@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FieldType } from '@ngx-formly/core';
+import { FieldType } from '@ruslanguns/core';
 
 @Component({
   selector: 'formly-field-ion-range',
@@ -15,4 +15,4 @@ import { FieldType } from '@ngx-formly/core';
   `,
   styles: [':host { display: inherit; }'],
 })
-export class FormlyFieldRange extends FieldType {}
+export class FormlyFieldRange extends FieldType { }

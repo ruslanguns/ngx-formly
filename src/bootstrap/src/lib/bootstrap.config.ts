@@ -1,4 +1,4 @@
-import { ConfigOption } from '@ngx-formly/core';
+import { ConfigOption } from '@ruslanguns/core';
 import {
   FormlyFieldInput,
   FormlyFieldCheckbox,
@@ -56,6 +56,6 @@ export const BOOTSTRAP_FORMLY_CONFIG: ConfigOption = {
     },
   ],
   wrappers: [
-    {name: 'form-field', component: FormlyWrapperFormField },
+    { name: 'form-field', component: FormlyWrapperFormField },
   ],
 };

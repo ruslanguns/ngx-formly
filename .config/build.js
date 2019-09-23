@@ -3,18 +3,18 @@ const fs = require("fs"),
   packages = [
     'core',
     'bootstrap',
-    'material',
-    'ionic',
-    'primeng',
-    'kendo',
-    'schematics',
-    'nativescript',
+    // 'material',
+    // 'ionic',
+    // 'primeng',
+    // 'kendo',
+    // 'schematics',
+    // 'nativescript',
   ];
 
 // update `FORMLY-VERSION` in package.json for all sub-packages
 const version = JSON.parse(fs.readFileSync('package.json', 'utf8')).version;
 packages.map(package => {
-  const packagePath = `dist/@ngx-formly/${package}`;
+  const packagePath = `dist/@ruslanguns/${package}`;
 
   execSync(`cp README.md ${packagePath}`);
 

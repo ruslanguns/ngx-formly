@@ -3,14 +3,14 @@ import { createGenericTestComponent } from '../../../../core/src/lib/test-utils'
 import { By } from '@angular/platform-browser';
 
 import { Component, ViewChild } from '@angular/core';
-import { FormlyModule, FormlyForm } from '@ngx-formly/core';
-import { FormlySelectModule } from '@ngx-formly/core/select';
+import { FormlyModule, FormlyForm } from '@ruslanguns/core';
+import { FormlySelectModule } from '@ruslanguns/core/select';
 import { FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { FormlyFieldSelect } from './select';
 import { of as observableOf } from 'rxjs';
 
 const createTestComponent = (html: string) =>
-    createGenericTestComponent(html, TestComponent) as ComponentFixture<TestComponent>;
+  createGenericTestComponent(html, TestComponent) as ComponentFixture<TestComponent>;
 
 let testComponentInputs;
 
@@ -50,7 +50,7 @@ describe('ui-bootstrap: Formly Field Select Component', () => {
           options: [
             { id: '1', name: 'Soccer' },
             { id: '2', name: 'Basketball' },
-            { id: {test: 'A'}, name: 'Not Soccer or Basketball' },
+            { id: { test: 'A' }, name: 'Not Soccer or Basketball' },
           ],
           valueProp: 'id',
           labelProp: 'name',
@@ -66,7 +66,7 @@ describe('ui-bootstrap: Formly Field Select Component', () => {
       const sports$ = observableOf([
         { id: '1', name: 'Soccer' },
         { id: '2', name: 'Basketball' },
-        { id: {test: 'A'}, name: 'Not Soccer or Basketball' },
+        { id: { test: 'A' }, name: 'Not Soccer or Basketball' },
       ]);
 
       testComponentInputs.fields = [{
@@ -88,7 +88,7 @@ describe('ui-bootstrap: Formly Field Select Component', () => {
 
 });
 
-@Component({selector: 'formly-form-test', template: '', entryComponents: []})
+@Component({ selector: 'formly-form-test', template: '', entryComponents: [] })
 class TestComponent {
   @ViewChild(FormlyForm) formlyForm: FormlyForm;
 

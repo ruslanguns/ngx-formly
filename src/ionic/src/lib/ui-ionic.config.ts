@@ -1,4 +1,4 @@
-import { ConfigOption } from '@ngx-formly/core';
+import { ConfigOption } from '@ruslanguns/core';
 import {
   FormlyFieldInput,
   FormlyFieldCheckbox,

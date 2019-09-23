@@ -1,5 +1,5 @@
 import { Directive, Input } from '@angular/core';
-import { FormlyAttributes, FormlyFieldConfig } from '@ngx-formly/core';
+import { FormlyAttributes, FormlyFieldConfig } from '@ruslanguns/core';
 
 @Directive({
   // tslint:disable-next-line

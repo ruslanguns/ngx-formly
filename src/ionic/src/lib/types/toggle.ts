@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FieldType } from '@ngx-formly/core';
+import { FieldType } from '@ruslanguns/core';
 
 @Component({
   selector: 'formly-field-ion-toggle',
@@ -10,5 +10,5 @@ import { FieldType } from '@ngx-formly/core';
     </ion-toggle>
   `,
 })
-export class FormlyFieldToggle extends FieldType {}
+export class FormlyFieldToggle extends FieldType { }
 

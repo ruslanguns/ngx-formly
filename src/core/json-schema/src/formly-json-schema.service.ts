@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import { FormlyFieldConfig } from '@ngx-formly/core';
+import { FormlyFieldConfig } from '@ruslanguns/core';
 import { JSONSchema7, JSONSchema7TypeName } from 'json-schema';
-import { ɵreverseDeepMerge as reverseDeepMerge } from '@ngx-formly/core';
+import { ɵreverseDeepMerge as reverseDeepMerge } from '@ruslanguns/core';
 import { AbstractControl } from '@angular/forms';
 
 export interface FormlyJsonschemaOptions {
@@ -96,7 +96,7 @@ export class FormlyJsonschema {
 
         const [propDeps, schemaDeps] = this.resolveDependencies(schema);
         Object.keys(schema.properties || {}).forEach(key => {
-          const f = this._toFieldConfig(<JSONSchema7> schema.properties[key], options);
+          const f = this._toFieldConfig(<JSONSchema7>schema.properties[key], options);
           field.fieldGroup.push(f);
           f.key = key;
           if (Array.isArray(schema.required) && schema.required.indexOf(key) !== -1) {
@@ -133,7 +133,7 @@ export class FormlyJsonschema {
           get: () => {
             if (!Array.isArray(schema.items)) {
               // When items is a single schema, the additionalItems keyword is meaningless, and it should not be used.
-              return this._toFieldConfig(<JSONSchema7> schema.items, options);
+              return this._toFieldConfig(<JSONSchema7>schema.items, options);
             }
 
             const itemSchema = schema.items[field.fieldGroup.length]
@@ -141,7 +141,7 @@ export class FormlyJsonschema {
               : schema.additionalItems;
 
             return itemSchema
-              ? this._toFieldConfig(<JSONSchema7> itemSchema, options)
+              ? this._toFieldConfig(<JSONSchema7>itemSchema, options)
               : {};
           },
           enumerable: true,

@@ -1,5 +1,5 @@
 import { Component, ViewChild, AfterViewChecked, ElementRef } from '@angular/core';
-import { FieldType } from '@ngx-formly/core';
+import { FieldType } from '@ruslanguns/core';
 
 @Component({
   selector: 'formly-field-select',

@@ -2,7 +2,7 @@ import { TestBed, inject } from '@angular/core/testing';
 import { FormGroup, Validators, FormControl } from '@angular/forms';
 import { Component } from '@angular/core';
 import { Subject, of } from 'rxjs';
-import { FormlyFieldConfig, FormlyFormBuilder, FieldArrayType, FormlyModule } from '@ngx-formly/core';
+import { FormlyFieldConfig, FormlyFormBuilder, FieldArrayType, FormlyModule } from '@ruslanguns/core';
 import { MockComponent } from '../../test-utils';
 import { FormlyValueChangeEvent, FormlyFormOptionsCache } from '../../components/formly.field.config';
 

@@ -1,3 +1,5 @@
+
+
 <div align="center">
   <img src="https://raw.githubusercontent.com/formly-js/angular-formly/master/other/logo/angular-formly-logo-64px.png">
   <br />
@@ -10,6 +12,11 @@
   [![Build Status](https://api.travis-ci.org/ngx-formly/ngx-formly.svg?branch=master)](https://api.travis-ci.org/ngx-formly/ngx-formly.svg?branch=master)
   [![Twitter](https://img.shields.io/badge/twitter-@formlydev-blue.svg)](https://twitter.com/formlydev)
 </div>
+
+  # ATTENTION !!!
+  > This is not the official repository. This one is created only for practical reasons. Do not use it or use it at your own risk.
+
+  > Please use the official library from [@ngx-formly](https://github.com/ngx-formly)
 
 ---
 

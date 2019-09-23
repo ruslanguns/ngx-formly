@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FieldWrapper } from '@ngx-formly/core';
+import { FieldWrapper } from '@ruslanguns/core';
 
 @Component({
   selector: 'formly-wrapper-ion-form-field',
@@ -22,4 +22,4 @@ import { FieldWrapper } from '@ngx-formly/core';
     </ion-item>
   `,
 })
-export class FormlyWrapperFormField extends FieldWrapper {}
+export class FormlyWrapperFormField extends FieldWrapper { }
