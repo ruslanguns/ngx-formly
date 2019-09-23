@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="5.5.2"></a>
+## [5.5.2](https://github.com/ngx-formly/ngx-formly/compare/v5.5.1...v5.5.2) (2019-09-23)
+
+
+
 <a name="5.5.0"></a>
 # [5.5.0](https://github.com/ngx-formly/ngx-formly/compare/v5.4.3...v5.5.0) (2019-09-22)
 
