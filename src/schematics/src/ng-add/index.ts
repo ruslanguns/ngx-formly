@@ -11,7 +11,7 @@ import { Schema } from './schema';
  *  - Adds pre-built themes to styles.ext
  *  - Adds Browser Animation to app.module
  */
-export default function(options: Schema): Rule {
+export default function (options: Schema): Rule {
   return chain([
     options && options.skipPackageJson ? noop() : addFormlyToPackageJson(),
     addFormlyModuleConfig(options),
@@ -19,11 +19,11 @@ export default function(options: Schema): Rule {
   ]);
 }
 
-/** Add @angular/forms, @ngx-formly/core to package.json if not already present. */
+/** Add @angular/forms, @ruslanguns/core to package.json if not already present. */
 function addFormlyToPackageJson() {
   return (host: Tree, context: SchematicContext) => {
     addPackageToPackageJson(host, 'dependencies', '@angular/forms', angularVersion);
-    addPackageToPackageJson(host, 'dependencies', '@ngx-formly/core', ngxFormlyVersion);
+    addPackageToPackageJson(host, 'dependencies', '@ruslanguns/core', ngxFormlyVersion);
 
     context.addTask(new NodePackageInstallTask());
 
@@ -47,7 +47,7 @@ function addFormlyModuleConfig(options: Schema) {
       host,
       modulePath,
       'FormlyModule.forRoot()',
-      '@ngx-formly/core',
+      '@ruslanguns/core',
     );
 
     return host;
@@ -61,7 +61,7 @@ function addUITheme(options: Schema) {
     const uiTheme = options.uiTheme;
 
     if (uiTheme) {
-      addPackageToPackageJson(host, 'dependencies', `@ngx-formly/${uiTheme}`, ngxFormlyVersion);
+      addPackageToPackageJson(host, 'dependencies', `@ruslanguns/${uiTheme}`, ngxFormlyVersion);
 
       // Is this needed if task is added by Formly package call?
       // context.addTask(new NodePackageInstallTask());
@@ -70,7 +70,7 @@ function addUITheme(options: Schema) {
         host,
         modulePath,
         `Formly${mapUIName(uiTheme)}Module`,
-        `@ngx-formly/${uiTheme}`,
+        `@ruslanguns/${uiTheme}`,
       );
     }
 

@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, forkJoin } from 'rxjs';
-import { FormlyFieldConfig } from '@ngx-formly/core';
+import { FormlyFieldConfig } from '@ruslanguns/core';
 
 @Injectable()
 export class UserService {
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   getUserData(): Observable<any> {
     return forkJoin([this.getUser(), this.getFields()]);

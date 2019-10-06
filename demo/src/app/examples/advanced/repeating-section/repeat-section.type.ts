@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FieldArrayType } from '@ngx-formly/core';
+import { FieldArrayType } from '@ruslanguns/core';
 
 @Component({
   selector: 'formly-repeat-section',
@@ -15,4 +15,4 @@ import { FieldArrayType } from '@ngx-formly/core';
     </div>
   `,
 })
-export class RepeatTypeComponent extends FieldArrayType {}
+export class RepeatTypeComponent extends FieldArrayType { }

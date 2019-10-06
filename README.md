@@ -6,8 +6,8 @@
   JSON powered / Dynamic forms in Angular
   <br /><br />
 
-  [![Npm version](https://badge.fury.io/js/%40ngx-formly%2Fcore.svg)](https://npmjs.org/package/@ngx-formly/core)
-  [![Downloads](http://img.shields.io/npm/dm/@ngx-formly/core.svg)](https://npmjs.org/package/@ngx-formly/core)
+  [![Npm version](https://badge.fury.io/js/%40ngx-formly%2Fcore.svg)](https://npmjs.org/package/@ruslanguns/core)
+  [![Downloads](http://img.shields.io/npm/dm/@ruslanguns/core.svg)](https://npmjs.org/package/@ruslanguns/core)
   [![Gitter](https://badges.gitter.im/formly-js/ng2-formly.svg)](https://gitter.im/formly-js/ng2-formly)
   [![Build Status](https://api.travis-ci.org/ngx-formly/ngx-formly.svg?branch=master)](https://api.travis-ci.org/ngx-formly/ngx-formly.svg?branch=master)
   [![Twitter](https://img.shields.io/badge/twitter-@formlydev-blue.svg)](https://twitter.com/formlydev)
@@ -48,10 +48,10 @@ Formly is a dynamic (JSON powered) form library for Angular that bring unmatched
 
 | Angular version | Formly version         |
 | --------------- | ---------------------- |
-| Angular >= 7    | `@ngx-formly/core@5.x` |
-| Angular >= 6    | `@ngx-formly/core@4.x` |
-| Angular >= 5    | `@ngx-formly/core@3.x` |
-| Angular >= 4    | `@ngx-formly/core@2.x` |
+| Angular >= 7    | `@ruslanguns/core@5.x` |
+| Angular >= 6    | `@ruslanguns/core@4.x` |
+| Angular >= 5    | `@ruslanguns/core@3.x` |
+| Angular >= 4    | `@ruslanguns/core@2.x` |
 | Angular >= 2    | `ng-formly@1.x`        |
 
 #### Quick links
@@ -61,24 +61,24 @@ Formly is a dynamic (JSON powered) form library for Angular that bring unmatched
 
 Follow these steps to get started with Ngx Formly. Also check out our [demos](https://ngx-formly.github.io/ngx-formly) for further examples.
 
-#### 1. Install @angular/forms and @ngx-formly/core packages:
+#### 1. Install @angular/forms and @ruslanguns/core packages:
 ```bash
-  npm install @angular/forms @ngx-formly/core --save
+  npm install @angular/forms @ruslanguns/core --save
 ```
 
 #### 2. Choose and install your UI (pre-defined types/templates) package:
 
 | UI                                                | Npm package name            | NgModule                    |
 | ------------------------------------------------- | --------------------------- | --------------------------- |
-| [Bootstrap](https://getbootstrap.com)             | `@ngx-formly/bootstrap`     | `FormlyBootstrapModule`     |
-| [Material2](https://github.com/angular/material2) | `@ngx-formly/material`      | `FormlyMaterialModule`      |
-| [Ionic](https://ionicframework.com)               | `@ngx-formly/ionic`         | `FormlyIonicModule`         |
-| [PrimeNG](http://primefaces.org/primeng/#/)       | `@ngx-formly/primeng`       | `FormlyPrimeNGModule`       |
-| [Kendo](http://www.telerik.com/kendo-angular-ui)  | `@ngx-formly/kendo`         | `FormlyKendoModule`         |
-| [NativeScript](https://www.nativescript.org)      | `@ngx-formly/nativescript`  | `FormlyNativescriptModule`  |
+| [Bootstrap](https://getbootstrap.com)             | `@ruslanguns/bootstrap`     | `FormlyBootstrapModule`     |
+| [Material2](https://github.com/angular/material2) | `@ruslanguns/material`      | `FormlyMaterialModule`      |
+| [Ionic](https://ionicframework.com)               | `@ruslanguns/ionic`         | `FormlyIonicModule`         |
+| [PrimeNG](http://primefaces.org/primeng/#/)       | `@ruslanguns/primeng`       | `FormlyPrimeNGModule`       |
+| [Kendo](http://www.telerik.com/kendo-angular-ui)  | `@ruslanguns/kendo`         | `FormlyKendoModule`         |
+| [NativeScript](https://www.nativescript.org)      | `@ruslanguns/nativescript`  | `FormlyNativescriptModule`  |
 
 ```bash
-  npm install @ngx-formly/<package-name> --save
+  npm install @ruslanguns/<package-name> --save
 ```
 
 #### 3. Import the `FormlyModule` and UI (pre-defined types/templates):
@@ -86,17 +86,17 @@ Follow these steps to get started with Ngx Formly. Also check out our [demos](ht
 ```typescript
 import {NgModule} from '@angular/core';
 import {ReactiveFormsModule} from '@angular/forms';
-import {FormlyModule} from '@ngx-formly/core';
+import {FormlyModule} from '@ruslanguns/core';
 
 /**
- * - Bootstrap:     import {FormlyBootstrapModule} from '@ngx-formly/bootstrap';
- * - Material2:     import {FormlyMaterialModule} from '@ngx-formly/material';
- * - Ionic:         import {FormlyIonicModule} from '@ngx-formly/ionic'
- * - PrimeNG:       import {FormlyPrimeNGModule} from '@ngx-formly/primeng';
- * - Kendo:         import {FormlyKendoModule} from '@ngx-formly/kendo';
- * - NativeScript:  import {FormlyNativescriptModule} from '@ngx-formly/nativescript';
+ * - Bootstrap:     import {FormlyBootstrapModule} from '@ruslanguns/bootstrap';
+ * - Material2:     import {FormlyMaterialModule} from '@ruslanguns/material';
+ * - Ionic:         import {FormlyIonicModule} from '@ruslanguns/ionic'
+ * - PrimeNG:       import {FormlyPrimeNGModule} from '@ruslanguns/primeng';
+ * - Kendo:         import {FormlyKendoModule} from '@ruslanguns/kendo';
+ * - NativeScript:  import {FormlyNativescriptModule} from '@ruslanguns/nativescript';
  */
-import {FormlyBootstrapModule} from '@ngx-formly/bootstrap';
+import {FormlyBootstrapModule} from '@ruslanguns/bootstrap';
 
 @NgModule({
   imports: [
@@ -123,7 +123,7 @@ export class AppModule {}
 ```typescript
 import {Component} from '@angular/core';
 import {FormGroup} from '@angular/forms';
-import {FormlyFieldConfig} from '@ngx-formly/core';
+import {FormlyFieldConfig} from '@ruslanguns/core';
 
 @Component({
   selector: 'app',
@@ -157,32 +157,32 @@ From there, it's just JavaScript. Allowing for DRY, maintainable, reusable forms
 
 ## Using with Angular-CLI
 
-`@ngx-formly/schematics` provides CLI commands for setting up a project and _eventually_ generating other features (e.g. wrapper components).
+`@ruslanguns/schematics` provides CLI commands for setting up a project and _eventually_ generating other features (e.g. wrapper components).
 Built on top of Schematics, this tool integrates with the Angular CLI.
 
 ### Installation
 
-Install `@ngx-formly/schematics` from npm:
+Install `@ruslanguns/schematics` from npm:
 
-`npm install @ngx-formly/schematics --save-dev`
+`npm install @ruslanguns/schematics --save-dev`
 
 ### Default Schematics Collection
 
-To use `@ngx-formly/schematics` as the default collection in your Angular CLI project,
+To use `@ruslanguns/schematics` as the default collection in your Angular CLI project,
 add it to your `angular.json`:
 
 ```bash
-ng config cli.defaultCollection @ngx-formly/schematics
+ng config cli.defaultCollection @ruslanguns/schematics
 ```
 
 The [collection schema](src/schematics/src/collection.json) defines the available schematics to run.
 
-The `@ngx-formly/schematics` extend the default `@schematics/angular` collection and so all existing Angular CLI commands are available.
-If you want to set defaults for schematics such as generating components with scss file, you must change the schematics package name from `@schematics/angular` to `@ngx-formly/schematics` in `angular.json`:
+The `@ruslanguns/schematics` extend the default `@schematics/angular` collection and so all existing Angular CLI commands are available.
+If you want to set defaults for schematics such as generating components with scss file, you must change the schematics package name from `@schematics/angular` to `@ruslanguns/schematics` in `angular.json`:
 
 ```json
 "schematics": {
-  "@ngx-formly/schematics:component": {
+  "@ruslanguns/schematics:component": {
     "styleext": "scss"
   }
 }
@@ -190,9 +190,9 @@ If you want to set defaults for schematics such as generating components with sc
 
 ### Quick Start with Schematics
 
-#### Install @angular/forms and @ngx-formly/core packages and choose a UI theme to install:
+#### Install @angular/forms and @ruslanguns/core packages and choose a UI theme to install:
 ```bash
-  ng add @ngx-formly/schematics --ui-theme=material
+  ng add @ruslanguns/schematics --ui-theme=material
 ```
 
 ## Roadmap

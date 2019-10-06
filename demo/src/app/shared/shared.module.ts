@@ -7,7 +7,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatMenuModule } from '@angular/material/menu';
-import { FormlyModule } from '@ngx-formly/core';
+import { FormlyModule } from '@ruslanguns/core';
 
 import { StackblitzButtonModule } from './stackblitz';
 import { ExampleViewerComponent } from './example-viewer/example-viewer.component';

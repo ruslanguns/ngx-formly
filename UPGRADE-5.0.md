@@ -1,7 +1,7 @@
 UPGRADE FROM 4.0 to 5.0
 =======================
 
-@ngx-formly/core
+@ruslanguns/core
 ----------------
 **Note**: this only affect the user's who create a custom field type.
 
@@ -41,11 +41,11 @@ After:
 
 Before:
 ```ts
-import { Field } from '@ngx-formly/core';
+import { Field } from '@ruslanguns/core';
 ```
 After:
 ```ts
-import { FieldType } from '@ngx-formly/core';
+import { FieldType } from '@ruslanguns/core';
 ```
 
  * passing `model`, `options` and `form` inputs to `formly-field` component is not required anymore:
@@ -131,42 +131,42 @@ FormlyModule.forRoot({
 })
 ```
 
-@ngx-formly/material
+@ruslanguns/material
 --------------------
-**Note**: this only affect the user's who import sub-modules of `@ngx-formly/material` instead of main module `FormlyMaterialModule`.
+**Note**: this only affect the user's who import sub-modules of `@ruslanguns/material` instead of main module `FormlyMaterialModule`.
 
  * `textarea`: textarea is moved into a new sub-module named `FormlyMatTextAreaModule` and is not part of `FormlyMatInputModule` anymore.
 
 Before:
 ```ts
-import { FormlyMatInputModule } from '@ngx-formly/material/input';
+import { FormlyMatInputModule } from '@ruslanguns/material/input';
 ```
 After:
 ```ts
-import { FormlyMatInputModule } from '@ngx-formly/material/input';
-import { FormlyMatTextAreaModule } from '@ngx-formly/material/textarea';
+import { FormlyMatInputModule } from '@ruslanguns/material/input';
+import { FormlyMatTextAreaModule } from '@ruslanguns/material/textarea';
 ```
 
  * `multicheckbox`: multicheckbox is moved into a new sub-module named `FormlyMatMultiCheckboxModule` and is not part of `FormlyMatCheckboxModule` anymore.
 
 Before:
 ```ts
-import { FormlyMatCheckboxModule } from '@ngx-formly/material/checkbox';
+import { FormlyMatCheckboxModule } from '@ruslanguns/material/checkbox';
 ```
 After:
 ```ts
-import { FormlyMatCheckboxModule } from '@ngx-formly/material/checkbox';
-import { FormlyMatMultiCheckboxModule } from '@ngx-formly/material/multicheckbox';
+import { FormlyMatCheckboxModule } from '@ruslanguns/material/checkbox';
+import { FormlyMatMultiCheckboxModule } from '@ruslanguns/material/multicheckbox';
 ```
 
-@ngx-formly/bootstrap
+@ruslanguns/bootstrap
 ---------------------
  * the deprecated wrappers ('label', 'fieldset', 'description', 'validation-message') has been removed, you may use `form-field` instead (for a smooth upgrade, ensure updating to version `4.7` first)
 
  * bootstrap v3 support is removed, so if you still using the v3 you may check the migrating to v4 https://getbootstrap.com/docs/4.0/migration/
 
 
-@ngx-formly/ionic
+@ruslanguns/ionic
 -----------------
 
 The library now require the Ionic V4 (https://blog.ionicframework.com/announcing-ionic-4-beta/).

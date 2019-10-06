@@ -30,16 +30,10 @@
 </mat-toolbar>
 
 <mat-sidenav-container fullscreen [style.top]="'56px'" class="mat-typography">
-  <mat-sidenav
-    [mode]="(isSmallDevice$ | async) ? 'over' : 'side'"
-    [opened]="!homeLink.isActive && !(isSmallDevice$ | async)"
-    [style.width.px]="250"
-    #sidenav>
+  <mat-sidenav [mode]="(isSmallDevice$ | async) ? 'over' : 'side'"
+    [opened]="!homeLink.isActive && !(isSmallDevice$ | async)" [style.width.px]="250" #sidenav>
     <ng-container *ngFor="let link of menu">
-      <a mat-button
-        class="menu-item"
-        [routerLink]="link.path"
-        routerLinkActive="active-link"
+      <a mat-button class="menu-item" [routerLink]="link.path" routerLinkActive="active-link"
         #routerLink="routerLinkActive">
         <span class="d-flex align-items-center">
           {{ link.title }}
@@ -53,10 +47,8 @@
           <span class="menu-subheader" *ngIf="!l.path">
             {{ l.title }}
           </span>
-          <a class="menu-subitem" *ngIf="l.path" mat-button
-            [routerLink]="l.path"
-            [routerLinkActiveOptions]="{ exact: true }"
-            routerLinkActive="active-link">
+          <a class="menu-subitem" *ngIf="l.path" mat-button [routerLink]="l.path"
+            [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="active-link">
             {{ l.title }}
           </a>
         </ng-container>
@@ -69,12 +61,11 @@
 
 <ng-template #version>
   <button mat-button [matMenuTriggerFor]="menu">
-    V5
+    Next
     <mat-icon>arrow_drop_down</mat-icon>
   </button>
   <mat-menu #menu="matMenu" yPosition="below" xPosition="before">
-    <a disabled mat-menu-item>V5</a>
-    <a href="https://ngx-formly.github.io/ngx-formly/v4" mat-menu-item>V4</a>
-    <a href="https://ngx-formly.github.io/ngx-formly/master/" mat-menu-item>Next</a>
+    <a disabled mat-menu-item>Next</a>
+    <a href="https://ngx-formly.github.io/ngx-formly/" mat-menu-item>Latest</a>
   </mat-menu>
 </ng-template>

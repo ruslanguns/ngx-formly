@@ -1,7 +1,7 @@
 import { Component, Input, OnInit, OnDestroy, ViewChild, ViewContainerRef, ComponentFactoryResolver, ComponentRef, ElementRef } from '@angular/core';
 import { CopierService } from '../copier/copier.service';
 import JSONFormatter from 'json-formatter-js';
-import { FormlyFieldConfig } from '@ngx-formly/core';
+import { FormlyFieldConfig } from '@ruslanguns/core';
 
 export interface ExampleType {
   title: string;
@@ -28,7 +28,7 @@ export class ExampleViewerComponent implements OnInit, OnDestroy {
   _debugFields: any;
   _prevModel: any;
 
-  @ViewChild('demo', {read: ViewContainerRef}) demoRef: ViewContainerRef;
+  @ViewChild('demo', { read: ViewContainerRef }) demoRef: ViewContainerRef;
   @ViewChild('modelPreview') modelPreviewRef: ElementRef;
   demoComponentRef: ComponentRef<any>;
 
@@ -36,7 +36,7 @@ export class ExampleViewerComponent implements OnInit, OnDestroy {
   showSource = false;
   showDebug = false;
 
-  constructor(private copier: CopierService, private componentFactoryResolver: ComponentFactoryResolver) {}
+  constructor(private copier: CopierService, private componentFactoryResolver: ComponentFactoryResolver) { }
 
   get model() {
     const model = JSON.stringify(this.demoComponentRef.instance.model);

@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
-import { FormlyModule, FormlyFieldConfig } from '@ngx-formly/core';
-import { FormlyBootstrapModule } from '@ngx-formly/bootstrap';
+import { FormlyModule, FormlyFieldConfig } from '@ruslanguns/core';
+import { FormlyBootstrapModule } from '@ruslanguns/bootstrap';
 
 import { AppComponent } from './app.component';
 

@@ -1,5 +1,5 @@
 import { Component, TemplateRef, ViewChild, AfterViewInit } from '@angular/core';
-import { FieldWrapper } from '@ngx-formly/core';
+import { FieldWrapper } from '@ruslanguns/core';
 
 @Component({
   selector: 'formly-wrapper-addons',
@@ -35,11 +35,11 @@ export class FormlyWrapperAddons extends FieldWrapper implements AfterViewInit {
 
   ngAfterViewInit() {
     if (this.matPrefix) {
-      Promise.resolve().then(() => this.to.prefix = this.matPrefix);
+      this.to.prefix = this.matPrefix;
     }
 
     if (this.matSuffix) {
-      Promise.resolve().then(() => this.to.suffix = this.matSuffix);
+      this.to.suffix = this.matSuffix;
     }
   }
 

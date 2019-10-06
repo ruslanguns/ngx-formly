@@ -3,7 +3,7 @@ import { RouterModule } from '@angular/router';
 import { ExamplesRouterViewerComponent } from '../../shared';
 import { CommonModule, CommonExampleConfigs, CommonExampleComponents, debugFields } from '../common';
 
-import { FormlyBootstrapModule } from '@ngx-formly/bootstrap';
+import { FormlyBootstrapModule } from '@ruslanguns/bootstrap';
 
 @NgModule({
   imports: [

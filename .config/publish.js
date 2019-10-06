@@ -13,5 +13,5 @@ const execSync = require('child_process').execSync,
 packages.map(package => {
   const packagePath = `${__dirname}/../dist/@ruslanguns/${package}`;
 
-  execSync(`cd ${packagePath} && npm publish --access public`);
+  execSync(`cd ${packagePath} && npm publish --tag next --access public`);
 });

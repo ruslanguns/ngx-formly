@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormArray, FormGroup } from '@angular/forms';
-import { FormlyFormOptions, FormlyFieldConfig } from '@ngx-formly/core';
+import { FormlyFormOptions, FormlyFieldConfig } from '@ruslanguns/core';
 
 export interface TabType {
   label: string;

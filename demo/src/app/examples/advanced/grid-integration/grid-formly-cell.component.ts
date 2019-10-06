@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormlyFieldConfig } from '@ngx-formly/core';
+import { FormlyFieldConfig } from '@ruslanguns/core';
 import { ICellRendererAngularComp } from 'ag-grid-angular';
 
 @Component({

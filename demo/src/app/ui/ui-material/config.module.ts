@@ -7,7 +7,7 @@ import { NativeSelectAppModule, NativeSelectExampleConfig, NativeSelectAppCompon
 import { ToggleAppModule, ToggleExampleConfig, ToggleAppComponent } from './toggle';
 import { SliderAppModule, SliderExampleConfig, SliderAppComponent } from './slider';
 import { AutocompleteAppModule, AutocompleteExampleConfig, AutocompleteAppComponent } from './autocomplete';
-import { FormlyMaterialModule } from '@ngx-formly/material';
+import { FormlyMaterialModule } from '@ruslanguns/material';
 
 @NgModule({
   imports: [

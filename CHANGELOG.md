@@ -1289,7 +1289,7 @@ To upgrade from 4.0 to 5.0 see [UPGRADE-5.0](./UPGRADE-5.0.md)
 <a name="2.0.0"></a>
 # [2.0.0](https://github.com/ngx-formly/ngx-formly/compare/v2.0.0-rc.55...v2.0.0) (2018-04-15)
 
-To upgrade from ng-formly to @ngx-formly/core see [UPGRADE-2.0](./UPGRADE-2.0.md)
+To upgrade from ng-formly to @ruslanguns/core see [UPGRADE-2.0](./UPGRADE-2.0.md)
 
 <a name="2.0.0-rc.55"></a>
 # [2.0.0-rc.55](https://github.com/ngx-formly/ngx-formly/compare/v2.0.0-rc.54...v2.0.0-rc.55) (2018-04-11)

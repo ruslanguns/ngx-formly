@@ -1,5 +1,5 @@
 import { Component, ViewChild, TemplateRef, OnInit } from '@angular/core';
-import { FormlyFieldConfig, FieldArrayType } from '@ngx-formly/core';
+import { FormlyFieldConfig, FieldArrayType } from '@ruslanguns/core';
 import { TableColumn } from '@swimlane/ngx-datatable/release/types';
 
 @Component({
@@ -33,7 +33,7 @@ export class DatatableTypeComponent extends FieldArrayType implements OnInit {
     this.to.columns.forEach(column => column.cellTemplate = this.defaultColumn);
   }
 
-  getField(field: FormlyFieldConfig, column: TableColumn, rowIndex: number ): FormlyFieldConfig {
+  getField(field: FormlyFieldConfig, column: TableColumn, rowIndex: number): FormlyFieldConfig {
     return field.fieldGroup[rowIndex].fieldGroup.find(f => f.key === column.prop);
   }
 }

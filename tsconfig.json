@@ -18,7 +18,8 @@
     ],
     "paths": {
       "@ruslanguns/*": [
-        "src/*/src/public_api"
+        "src/*/src/public_api",
+        "src/ui/*/src/public_api"
       ],
     }
   },
