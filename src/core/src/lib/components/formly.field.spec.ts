@@ -10,7 +10,7 @@ import {
 } from '../core';
 
 const createTestComponent = (html: string) =>
-    createGenericTestComponent(html, TestComponent) as ComponentFixture<TestComponent>;
+  createGenericTestComponent(html, TestComponent) as ComponentFixture<TestComponent>;
 
 function getFormlyFieldElement(element: HTMLElement): HTMLInputElement {
   return <HTMLInputElement>element.querySelector('formly-field');
@@ -48,9 +48,6 @@ describe('FormlyField Component', () => {
             name: 'label',
             component: FormlyWrapperLabel,
           }],
-          manipulators: [
-            { class: Manipulator, method: 'run' },
-          ],
         }),
       ],
     });
@@ -76,14 +73,14 @@ describe('FormlyField Component', () => {
           formControl: new FormGroup({}),
         },
         hooks: {
-          afterContentInit: () => {},
-          afterContentChecked: () => {},
-          afterViewInit: () => {},
-          afterViewChecked: () => {},
-          doCheck: () => {},
-          onInit: () => {},
-          onChanges: () => {},
-          onDestroy: () => {},
+          afterContentInit: () => { },
+          afterContentChecked: () => { },
+          afterViewInit: () => { },
+          afterViewChecked: () => { },
+          doCheck: () => { },
+          onInit: () => { },
+          onChanges: () => { },
+          onDestroy: () => { },
         },
       },
     };
@@ -117,7 +114,6 @@ describe('FormlyField Component', () => {
         key: 'title',
         type: 'text',
         formControl: new FormControl(),
-        lifecycle: {},
         templateOptions: {
           placeholder: 'Title',
         },
@@ -136,20 +132,17 @@ describe('FormlyField Component', () => {
     testComponentInputs = {
       field: {
         type: 'formly-group',
-        lifecycle: {},
         fieldGroup: [
           {
             key: 'title1',
             type: 'text',
             formControl: new FormControl(),
-            lifecycle: {},
             templateOptions: { placeholder: 'Title1' },
           },
           {
             key: 'title2',
             type: 'text',
             formControl: new FormControl(),
-            lifecycle: {},
             templateOptions: { placeholder: 'Title2' },
           },
         ],
@@ -169,7 +162,6 @@ describe('FormlyField Component', () => {
         field: {
           key: 'title',
           type: 'text',
-          lifecycle: {},
           templateOptions: {
             label: 'Title',
             placeholder: 'Title',
@@ -206,7 +198,6 @@ describe('FormlyField Component', () => {
         type: 'text',
         formControl: new FormControl(),
         optionsTypes: ['other'],
-        lifecycle: {},
         templateOptions: {
           placeholder: 'Title',
         },
@@ -231,14 +222,14 @@ class TestComponent {
   form = testComponentInputs.form;
   model = testComponentInputs.model || {};
 
-  changeModel(event) {}
+  changeModel(event) { }
 }
 
 @Component({
   selector: 'formly-field-text',
   template: `<input type="text" [formControl]="formControl" [formlyAttributes]="field">`,
 })
-export class FormlyFieldText extends FieldType {}
+export class FormlyFieldText extends FieldType { }
 
 @Component({
   selector: 'formly-wrapper-label',
@@ -248,20 +239,4 @@ export class FormlyFieldText extends FieldType {}
   `,
 })
 export class FormlyWrapperLabel extends FieldWrapper {
-}
-
-export class Manipulator {
-  run(fc) {
-    fc.templateManipulators.postWrapper.push((field) => {
-      if (field && field.templateOptions && field.templateOptions.postWrapper) {
-        return 'label';
-      }
-    });
-
-    fc.templateManipulators.preWrapper.push((field) => {
-      if (field && field.templateOptions && field.templateOptions.preWrapper) {
-        return 'label';
-      }
-    });
-  }
 }

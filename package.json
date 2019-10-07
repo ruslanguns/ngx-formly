@@ -1,6 +1,6 @@
 {
-  "name": "@ngx-formly/common",
-  "version": "5.4.2",
+  "name": "@ruslanguns/common",
+  "version": "5.6.0-alpha.0",
   "author": "Zama Khan Mohammed <mohammedzamakhan@gmail.com>",
   "contributors": [
     "Zama Khan Mohammed <mohammedzamakhan@gmail.com>",
@@ -12,22 +12,25 @@
     "lint:fix": "tslint --fix -p tsconfig.json",
     "commit": "npm run build && git-cz",
     "bundlesize": "npm run build && bundlesize",
-    "build": "npm run build:core && npm run build:bootstrap && npm run build:material && npm run build:ionic && npm run build:primeng && npm run build:kendo && npm run build:nativescript && npm run build:schematics && node .config/build.js",
-    "build:core": "ng build @ngx-formly/core",
-    "build:bootstrap": "ng build @ngx-formly/bootstrap",
-    "build:material": "ng build @ngx-formly/material",
-    "build:ionic": "ng build @ngx-formly/ionic",
-    "build:primeng": "ng build @ngx-formly/primeng",
-    "build:kendo": "ng build @ngx-formly/kendo",
-    "build:nativescript": "ng build @ngx-formly/nativescript",
+    "build": "npm run build:core && npm run build:bootstrap && node .config/build.js",
+    "build_all": "npm run build:core && npm run build:bootstrap && npm run build:material && npm run build:ionic && npm run build:primeng && npm run build:kendo && npm run build:nativescript && npm run build:schematics && node .config/build.js",
+    "build:core": "ng build @ruslanguns/core",
+    "build:bootstrap": "ng build @ruslanguns/bootstrap",
+    "build:material": "ng build @ruslanguns/material",
+    "build:ionic": "ng build @ruslanguns/ionic",
+    "build:primeng": "ng build @ruslanguns/primeng",
+    "build:kendo": "ng build @ruslanguns/kendo",
+    "build:nativescript": "ng build @ruslanguns/nativescript",
     "build:schematics": "cd src/schematics && npm run build && cd ../.. && npm run copy:schematics",
-    "copy:schematics": "cpr src/schematics dist/@ngx-formly/schematics --delete-first --filter node_modules/",
-    "release": "standard-version && npm run build && node .config/publish.js",
+    "copy:schematics": "cpr src/schematics dist/@ruslanguns/schematics --delete-first --filter node_modules/",
+    "release": "standard-version --prerelease alpha && npm run build && node .config/publish.js",
     "start": "ng serve --port 4100 --open",
     "demo": "npm run start",
+    "build:demo": "ng build --prod --base-href=\"/ngx-formly/next/\"",
     "deploy": "node .config/deploy.js",
-    "test": "ng test @ngx-formly/core --browsers ChromeHeadless && ng test @ngx-formly/bootstrap --browsers ChromeHeadless && ng test @ngx-formly/material --browsers ChromeHeadless && cd src/schematics && npm run test",
-    "test:watch": "ng test @ngx-formly/core --watch",
+    "gh-pages": "gh-pages --add --dist dist/app --repo=https://$GH_TOKEN@github.com/ruslanguns/ngx-formly.git",
+    "test": "ng test @ruslanguns/core --browsers ChromeHeadless && ng test @ruslanguns/bootstrap --browsers ChromeHeadless && ng test @ruslanguns/material --browsers ChromeHeadless && cd src/schematics && npm run test",
+    "test:watch": "ng test @ruslanguns/core --watch",
     "commitmsg": "commitlint -e $GIT_PARAMS",
     "github-release": "conventional-github-releaser -p angular -t $GH_TOKEN --draft"
   },
@@ -46,12 +49,12 @@
   "description": "@ngx-formly is an Angular 2 module which has Components to help customize and render JavaScript/JSON configured forms. The `formly-form` Component and the FormlyConfig service are very powerful and bring unmatched maintainability to your application's forms.",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ngx-formly/ngx-formly.git"
+    "url": "git+https://github.com/ruslanguns/ngx-formly.git"
   },
   "bugs": {
-    "url": "https://github.com/ngx-formly/ngx-formly/issues"
+    "url": "https://github.com/ruslanguns/ngx-formly/issues"
   },
-  "homepage": "https://github.com/ngx-formly/ngx-formly#readme",
+  "homepage": "https://github.com/ruslanguns/ngx-formly#readme",
   "dependencies": {
     "@angular/animations": "^7.2.15",
     "@angular/cdk": "^7.3.7",
@@ -142,31 +145,31 @@
   },
   "bundlesize": [
     {
-      "path": "./dist/@ngx-formly/core/bundles/ngx-formly-core.umd.min.js",
+      "path": "./dist/@ruslanguns/core/bundles/ngx-formly-core.umd.min.js",
       "maxSize": "15 kB"
     },
     {
-      "path": "./dist/@ngx-formly/bootstrap/bundles/ngx-formly-bootstrap.umd.min.js",
+      "path": "./dist/@ruslanguns/bootstrap/bundles/ngx-formly-bootstrap.umd.min.js",
       "maxSize": "5 kB"
     },
     {
-      "path": "./dist/@ngx-formly/material/bundles/ngx-formly-material.umd.min.js",
+      "path": "./dist/@ruslanguns/material/bundles/ngx-formly-material.umd.min.js",
       "maxSize": "5 kB"
     },
     {
-      "path": "./dist/@ngx-formly/ionic/bundles/ngx-formly-ionic.umd.min.js",
+      "path": "./dist/@ruslanguns/ionic/bundles/ngx-formly-ionic.umd.min.js",
       "maxSize": "5 kB"
     },
     {
-      "path": "./dist/@ngx-formly/primeng/bundles/ngx-formly-primeng.umd.min.js",
+      "path": "./dist/@ruslanguns/primeng/bundles/ngx-formly-primeng.umd.min.js",
       "maxSize": "5 kB"
     },
     {
-      "path": "./dist/@ngx-formly/kendo/bundles/ngx-formly-kendo.umd.min.js",
+      "path": "./dist/@ruslanguns/kendo/bundles/ngx-formly-kendo.umd.min.js",
       "maxSize": "5 kB"
     },
     {
-      "path": "./dist/@ngx-formly/nativescript/bundles/ngx-formly-nativescript.umd.min.js",
+      "path": "./dist/@ruslanguns/nativescript/bundles/ngx-formly-nativescript.umd.min.js",
       "maxSize": "5 kB"
     }
   ]

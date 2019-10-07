@@ -1,6 +1,6 @@
 import { Component, OnDestroy } from '@angular/core';
 import { FormGroup } from '@angular/forms';
-import { FormlyFormOptions, FormlyFieldConfig } from '@ngx-formly/core';
+import { FormlyFormOptions, FormlyFieldConfig } from '@ruslanguns/core';
 import { Subject } from 'rxjs';
 import { takeUntil, startWith, tap, filter } from 'rxjs/operators';
 

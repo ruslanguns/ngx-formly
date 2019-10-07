@@ -1,4 +1,4 @@
-UPGRADE FROM ng-formly to @ngx-formly/core
+UPGRADE FROM ng-formly to @ruslanguns/core
 ==========================================
 
 Package name
@@ -11,8 +11,8 @@ import {FormlyModule, FormlyBootstrapModule} from 'ng-formly';
 
 After:
 ```ts
-import {FormlyModule} from '@ngx-formly/core';
-import {FormlyBootstrapModule} from '@ngx-formly/bootstrap';
+import {FormlyModule} from '@ruslanguns/core';
+import {FormlyBootstrapModule} from '@ruslanguns/bootstrap';
 ```
 
 FormlyPubSub
@@ -47,7 +47,7 @@ The `FormlyValidationMessages` service has been removed:
 
 #### Before:
 ```ts
-import { FormlyValidationMessages } from '@ngx-formly/core';
+import { FormlyValidationMessages } from '@ruslanguns/core';
 ...
 constructor(private formlyMessages: FormlyValidationMessages) {}
 test(): string {
@@ -57,7 +57,7 @@ test(): string {
 ```
 #### After:
 ```ts
-import { FormlyConfig } from '@ngx-formly/core';
+import { FormlyConfig } from '@ruslanguns/core';
 ...
 constructor(private formlyConfig: FormlyConfig) {}
 test(): string {

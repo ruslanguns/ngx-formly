@@ -25,13 +25,15 @@ const TEMPLATE_FILES = {
     { file: 'styles.scss', filecontent: `@import '~@progress/kendo-theme-default/dist/all.css';` },
   ],
   primeng: [
-    { file: 'styles.scss', filecontent: `
+    {
+      file: 'styles.scss', filecontent: `
       @import '~primeng/resources/primeng.min.css';
       @import '~primeng/resources/themes/bootstrap/theme.css';
     ` },
   ],
   ionic: [
-    { file: 'styles.scss', filecontent: `
+    {
+      file: 'styles.scss', filecontent: `
       @import "~@ionic/angular/css/core.css";
       @import "~@ionic/angular/css/normalize.css";
       @import "~@ionic/angular/css/structure.css";
@@ -63,30 +65,30 @@ const dependencies = {
     'zone.js': '^0.9.0',
     'tslib': '^1.7.0',
 
-    '@ngx-formly/core': formlyVersion,
+    '@ruslanguns/core': formlyVersion,
   },
   bootstrap: {
-    '@ngx-formly/bootstrap': formlyVersion,
+    '@ruslanguns/bootstrap': formlyVersion,
     'bootstrap': '^4.2.1',
     'popper.js': '^1.14',
     'jquery': '^3',
   },
   material: {
-    '@ngx-formly/material': formlyVersion,
+    '@ruslanguns/material': formlyVersion,
   },
   kendo: {
-    '@ngx-formly/kendo': formlyVersion,
+    '@ruslanguns/kendo': formlyVersion,
     '@progress/kendo-theme-default': '^3.2.0',
     '@progress/kendo-angular-dropdowns': '^3.4.2',
     '@progress/kendo-angular-l10n': '^1.0.0',
     'rxjs-compat': '^6.4.0',
   },
   primeng: {
-    '@ngx-formly/primeng': formlyVersion,
+    '@ruslanguns/primeng': formlyVersion,
     'primeng': '^7.0.5',
   },
   ionic: {
-    '@ngx-formly/ionic': formlyVersion,
+    '@ruslanguns/ionic': formlyVersion,
     '@ionic/angular': '4.0.0-beta.7', // workaround for https://github.com/ionic-team/ionic/issues/16354
     '@angular-devkit/core': '*',
     '@angular-devkit/schematics': '*',
@@ -152,15 +154,15 @@ export class StackblitzWriter {
     const options: any = { type };
 
     if (['bootstrap', 'material', 'kendo', 'ionic', 'primeng'].indexOf(options.type) === -1) {
-      if (appModuleContent.indexOf('@ngx-formly/bootstrap') !== -1) {
+      if (appModuleContent.indexOf('@ruslanguns/bootstrap') !== -1) {
         options.type = 'bootstrap';
-      } else if (appModuleContent.indexOf('@ngx-formly/material') !== -1) {
+      } else if (appModuleContent.indexOf('@ruslanguns/material') !== -1) {
         options.type = 'material';
-      } else if (appModuleContent.indexOf('@ngx-formly/kendo') !== -1) {
+      } else if (appModuleContent.indexOf('@ruslanguns/kendo') !== -1) {
         options.type = 'kendo';
-      } else if (appModuleContent.indexOf('@ngx-formly/ionic') !== -1) {
+      } else if (appModuleContent.indexOf('@ruslanguns/ionic') !== -1) {
         options.type = 'ionic';
-      } else if (appModuleContent.indexOf('@ngx-formly/primeng') !== -1) {
+      } else if (appModuleContent.indexOf('@ruslanguns/primeng') !== -1) {
         options.type = 'primeng';
       }
     }
@@ -280,8 +282,8 @@ export class StackblitzWriter {
         filecontent = filecontent.replace(`FormlyModule.forRoot`, `IonicModule.forRoot(),\n    FormlyModule.forRoot`);
       }
 
-      if (filecontent.indexOf(`@ngx-formly/${options.type}'`) === -1) {
-        filecontent = filecontent.replace(`'@ngx-formly/core';`, `'@ngx-formly/core';\nimport { ${ngModule[options.type]} } from '@ngx-formly/${options.type}';`);
+      if (filecontent.indexOf(`@ruslanguns/${options.type}'`) === -1) {
+        filecontent = filecontent.replace(`'@ruslanguns/core';`, `'@ruslanguns/core';\nimport { ${ngModule[options.type]} } from '@ruslanguns/${options.type}';`);
         filecontent = filecontent.replace(`FormlyModule.forRoot`, `${ngModule[options.type]},\n    FormlyModule.forRoot`);
       }
 

@@ -1,7 +1,7 @@
 
 import { FormlyJsonschema } from './formly-json-schema.service';
 import { JSONSchema7 } from 'json-schema';
-import { FormlyFieldConfig, FormlyTemplateOptions } from '@ngx-formly/core';
+import { FormlyFieldConfig, FormlyTemplateOptions } from '@ruslanguns/core';
 import { FormControl } from '@angular/forms';
 
 describe('Service: FormlyJsonschema', () => {
@@ -147,23 +147,23 @@ describe('Service: FormlyJsonschema', () => {
     // https://json-schema.org/latest/json-schema-validation.html#rfc.section.6.4
     describe('array validation keywords', () => {
       it('supports array items keyword as object', () => {
-         const schema: JSONSchema7 = {
-           type: 'array',
-           items: { type: 'string' },
-         };
+        const schema: JSONSchema7 = {
+          type: 'array',
+          items: { type: 'string' },
+        };
 
-         const config = formlyJsonschema.toFieldConfig(schema);
+        const config = formlyJsonschema.toFieldConfig(schema);
 
-         const childConfig: FormlyFieldConfig = { templateOptions: { ...emmptyTemplateOptions }, type: 'string', defaultValue: undefined };
-         const baseConfig: FormlyFieldConfig = {
-            type: 'array',
-            defaultValue: undefined,
-            templateOptions: { ...emmptyTemplateOptions },
-            fieldArray: childConfig,
-            fieldGroup: [],
-         };
+        const childConfig: FormlyFieldConfig = { templateOptions: { ...emmptyTemplateOptions }, type: 'string', defaultValue: undefined };
+        const baseConfig: FormlyFieldConfig = {
+          type: 'array',
+          defaultValue: undefined,
+          templateOptions: { ...emmptyTemplateOptions },
+          fieldArray: childConfig,
+          fieldGroup: [],
+        };
 
-         expect(config).toEqual(baseConfig);
+        expect(config).toEqual(baseConfig);
       });
 
       it('supports array items as array of schemas', () => {
@@ -171,7 +171,7 @@ describe('Service: FormlyJsonschema', () => {
           type: 'array',
           items: [
             { type: 'string' },
-            { type: 'number'},
+            { type: 'number' },
           ],
         };
 
@@ -196,7 +196,7 @@ describe('Service: FormlyJsonschema', () => {
           type: 'array',
           items: [
             { type: 'string' },
-            { type: 'number'},
+            { type: 'number' },
           ],
           additionalItems: { type: 'boolean' },
         };
@@ -204,7 +204,7 @@ describe('Service: FormlyJsonschema', () => {
         const config = formlyJsonschema.toFieldConfig(schema);
 
         const childConfig: FormlyFieldConfig = { templateOptions: { ...emmptyTemplateOptions }, type: 'string', defaultValue: undefined };
-        const childConfig2: FormlyFieldConfig = { templateOptions: { ...emmptyTemplateOptions }, type: 'number', defaultValue: undefined, parsers: [jasmine.any(Function)]};
+        const childConfig2: FormlyFieldConfig = { templateOptions: { ...emmptyTemplateOptions }, type: 'number', defaultValue: undefined, parsers: [jasmine.any(Function)] };
         const childConfig3: FormlyFieldConfig = { templateOptions: { ...emmptyTemplateOptions }, type: 'boolean', defaultValue: undefined };
 
         expect(config.fieldArray).toEqual(childConfig);
@@ -298,7 +298,7 @@ describe('Service: FormlyJsonschema', () => {
         const nested: FormlyFieldConfig = {
           type: 'object',
           key: 'nested',
-          templateOptions: {...emmptyTemplateOptions },
+          templateOptions: { ...emmptyTemplateOptions },
           defaultValue: undefined,
           fieldGroup: [nestedProp],
         };
@@ -624,8 +624,8 @@ describe('Service: FormlyJsonschema', () => {
               'type': 'object',
               'properties': {
                 'street_address': { 'type': 'string' },
-                'city':           { 'type': 'string' },
-                'state':          { 'type': 'string' },
+                'city': { 'type': 'string' },
+                'state': { 'type': 'string' },
               },
               'required': ['street_address', 'city', 'state'],
             },
@@ -634,9 +634,10 @@ describe('Service: FormlyJsonschema', () => {
           'properties': {
             'billing_address': {
               allOf: [
-                {'$ref': '#/definitions/address'},
-                { 'properties': {
-                    'type': { 'enum': [ 'residential', 'business' ] },
+                { '$ref': '#/definitions/address' },
+                {
+                  'properties': {
+                    'type': { 'enum': ['residential', 'business'] },
                   },
                 },
               ],
@@ -644,7 +645,7 @@ describe('Service: FormlyJsonschema', () => {
           },
         };
         const { fieldGroup } = formlyJsonschema.toFieldConfig(schema);
-        const expected = fieldGroup[0].fieldGroup.map(({key, type, templateOptions: { required } }) => ({ key, type, required }));
+        const expected = fieldGroup[0].fieldGroup.map(({ key, type, templateOptions: { required } }) => ({ key, type, required }));
         expect(expected).toEqual([
           { key: 'street_address', type: 'string', required: true },
           { key: 'city', type: 'string', required: true },
@@ -660,15 +661,16 @@ describe('Service: FormlyJsonschema', () => {
               'type': 'object',
               'properties': {
                 'street_address': { 'type': 'string' },
-                'city':           { 'type': 'string' },
-                'state':          { 'type': 'string' },
+                'city': { 'type': 'string' },
+                'state': { 'type': 'string' },
               },
               'required': ['street_address', 'city', 'state'],
             },
             'mailingAddress': {
               allOf: [
-                {'$ref': '#/definitions/baseAddress'},
-                { 'properties': {
+                { '$ref': '#/definitions/baseAddress' },
+                {
+                  'properties': {
                     'country': { 'type': 'string' },
                   },
                 },
@@ -679,9 +681,10 @@ describe('Service: FormlyJsonschema', () => {
           'properties': {
             'billing_address': {
               allOf: [
-                {'$ref': '#/definitions/mailingAddress'},
-                { 'properties': {
-                    'type': { 'enum': [ 'residential', 'business' ] },
+                { '$ref': '#/definitions/mailingAddress' },
+                {
+                  'properties': {
+                    'type': { 'enum': ['residential', 'business'] },
                   },
                 },
               ],
@@ -689,7 +692,7 @@ describe('Service: FormlyJsonschema', () => {
           },
         };
         const { fieldGroup } = formlyJsonschema.toFieldConfig(schema);
-        const expected = fieldGroup[0].fieldGroup.map(({key, type, templateOptions: { required } }) => ({ key, type, required }));
+        const expected = fieldGroup[0].fieldGroup.map(({ key, type, templateOptions: { required } }) => ({ key, type, required }));
         expect(expected).toEqual([
           { key: 'street_address', type: 'string', required: true },
           { key: 'city', type: 'string', required: true },
@@ -703,17 +706,17 @@ describe('Service: FormlyJsonschema', () => {
         const schema: JSONSchema7 = {
           'allOf': [
             {
-              'properties': { 'firstname': {'type': 'string'} },
+              'properties': { 'firstname': { 'type': 'string' } },
               'required': ['firstname'],
             },
             {
-              'properties': { 'lastname': {'type': 'string'} },
+              'properties': { 'lastname': { 'type': 'string' } },
               'required': ['lastname'],
             },
           ],
         };
         const { fieldGroup } = formlyJsonschema.toFieldConfig(schema);
-        const expected = fieldGroup.map(({key, templateOptions: { required } }) => ({ key, required }));
+        const expected = fieldGroup.map(({ key, templateOptions: { required } }) => ({ key, required }));
         expect(expected).toEqual([
           { key: 'firstname', required: true },
           { key: 'lastname', required: true },
@@ -722,21 +725,21 @@ describe('Service: FormlyJsonschema', () => {
 
       it('should merge allOf with base schema', () => {
         const schema: JSONSchema7 = {
-          'properties': { 'firstname': {'type': 'string'} },
+          'properties': { 'firstname': { 'type': 'string' } },
           'required': ['firstname'],
           'allOf': [
             {
-              'properties': { 'familyname': {'type': 'string'} },
+              'properties': { 'familyname': { 'type': 'string' } },
               'required': ['familyname'],
             },
             {
-              'properties': { 'lastname': {'type': 'string'} },
+              'properties': { 'lastname': { 'type': 'string' } },
               'required': ['lastname'],
             },
           ],
         };
         const { fieldGroup } = formlyJsonschema.toFieldConfig(schema);
-        const expected = fieldGroup.map(({key, templateOptions: { required } }) => ({ key, required }));
+        const expected = fieldGroup.map(({ key, templateOptions: { required } }) => ({ key, required }));
         expect(expected).toEqual([
           { key: 'firstname', required: true },
           { key: 'familyname', required: true },

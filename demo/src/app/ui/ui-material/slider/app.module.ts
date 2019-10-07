@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
-import { FormlyModule } from '@ngx-formly/core';
-import { FormlyMatSliderModule } from '@ngx-formly/material/slider';
+import { FormlyModule } from '@ruslanguns/core';
+import { FormlyMatSliderModule } from '@ruslanguns/material/slider';
 
 import { AppComponent } from './app.component';
 

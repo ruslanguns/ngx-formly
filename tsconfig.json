@@ -17,8 +17,9 @@
       "dom"
     ],
     "paths": {
-      "@ngx-formly/*": [
-        "src/*/src/public_api"
+      "@ruslanguns/*": [
+        "src/*/src/public_api",
+        "src/ui/*/src/public_api"
       ],
     }
   },

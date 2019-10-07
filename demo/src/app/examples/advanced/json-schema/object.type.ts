@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FieldType } from '@ngx-formly/core';
+import { FieldType } from '@ruslanguns/core';
 
 @Component({
   selector: 'formly-object-type',
@@ -14,7 +14,7 @@ import { FieldType } from '@ngx-formly/core';
   `,
 })
 export class ObjectTypeComponent extends FieldType {
-    defaultOptions = {
-        defaultValue: {},
-    };
+  defaultOptions = {
+    defaultValue: {},
+  };
 }

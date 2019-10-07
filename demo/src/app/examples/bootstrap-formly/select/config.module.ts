@@ -17,7 +17,7 @@ import { AppComponent } from './app.component';
             title: 'Select',
             description: `
               Here are all of the options you have available to you with the
-              <code>select</code> type from <code>@ngx-formly/bootstrap</code>
+              <code>select</code> type from <code>@ruslanguns/bootstrap</code>
             `,
             component: AppComponent,
             files: [

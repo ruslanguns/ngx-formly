@@ -2,6 +2,59 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="5.6.0-alpha.0"></a>
+# [5.6.0-alpha.0](https://github.com/ruslanguns/ngx-formly/compare/v5.5.2...v5.6.0-alpha.0) (2019-10-07)
+
+
+### Bug Fixes
+
+* **core:** update ([653cd9a](https://github.com/ruslanguns/ngx-formly/commit/653cd9a))
+
+
+### Features
+
+* **bootstrap:** move types into separate entry points ([ba3d802](https://github.com/ruslanguns/ngx-formly/commit/ba3d802))
+* **core:** mark define fieldComponent optional for custom wrapper ([#1667](https://github.com/ruslanguns/ngx-formly/issues/1667)) ([e59b0b9](https://github.com/ruslanguns/ngx-formly/commit/e59b0b9))
+* **core:** remove deprecated methods and configs ([#1665](https://github.com/ruslanguns/ngx-formly/issues/1665)) ([b8204c3](https://github.com/ruslanguns/ngx-formly/commit/b8204c3))
+* **ionic:** move types into separate entry points ([#1570](https://github.com/ruslanguns/ngx-formly/issues/1570)) ([3e7740c](https://github.com/ruslanguns/ngx-formly/commit/3e7740c))
+* **kendo:** move types into separate entry points ([#1569](https://github.com/ruslanguns/ngx-formly/issues/1569)) ([fb438df](https://github.com/ruslanguns/ngx-formly/commit/fb438df))
+* **primeng:** move types into separate entry points ([#1568](https://github.com/ruslanguns/ngx-formly/issues/1568)) ([6b9d7eb](https://github.com/ruslanguns/ngx-formly/commit/6b9d7eb))
+
+
+
+<a name="5.5.2"></a>
+## [5.5.2](https://github.com/ngx-formly/ngx-formly/compare/v5.5.1...v5.5.2) (2019-09-23)
+
+
+
+<a name="5.5.0"></a>
+# [5.5.0](https://github.com/ngx-formly/ngx-formly/compare/v5.4.3...v5.5.0) (2019-09-22)
+
+
+### Bug Fixes
+
+* **core:** better clone for File and moment.js instance ([#1789](https://github.com/ngx-formly/ngx-formly/issues/1789)) ([7efe05c](https://github.com/ngx-formly/ngx-formly/commit/7efe05c)), closes [#1788](https://github.com/ngx-formly/ngx-formly/issues/1788)
+* **core:** skip _markForCheck call during init ([#1792](https://github.com/ngx-formly/ngx-formly/issues/1792)) ([ee25a35](https://github.com/ngx-formly/ngx-formly/commit/ee25a35))
+
+
+### Features
+
+* **json-schema:** set nullable string type to `null` if empty ([#1787](https://github.com/ngx-formly/ngx-formly/issues/1787)) ([33e072b](https://github.com/ngx-formly/ngx-formly/commit/33e072b))
+
+
+
+<a name="5.4.3"></a>
+## [5.4.3](https://github.com/ngx-formly/ngx-formly/compare/v5.4.2...v5.4.3) (2019-09-20)
+
+
+### Bug Fixes
+
+* **core:** better clone for File and moment.js instance ([#1789](https://github.com/ngx-formly/ngx-formly/issues/1789)) ([d810035](https://github.com/ngx-formly/ngx-formly/commit/d810035)), closes [#1788](https://github.com/ngx-formly/ngx-formly/issues/1788)
+* **core:** skip _markForCheck call during init ([#1792](https://github.com/ngx-formly/ngx-formly/issues/1792)) ([718920a](https://github.com/ngx-formly/ngx-formly/commit/718920a))
+* **json-schema:** set nullable string type to `null` if empty ([#1787](https://github.com/ngx-formly/ngx-formly/issues/1787)) ([8d4985b](https://github.com/ngx-formly/ngx-formly/commit/8d4985b))
+
+
+
 <a name="5.4.2"></a>
 ## [5.4.2](https://github.com/ngx-formly/ngx-formly/compare/v5.4.1...v5.4.2) (2019-09-16)
 
@@ -1256,7 +1309,7 @@ To upgrade from 4.0 to 5.0 see [UPGRADE-5.0](./UPGRADE-5.0.md)
 <a name="2.0.0"></a>
 # [2.0.0](https://github.com/ngx-formly/ngx-formly/compare/v2.0.0-rc.55...v2.0.0) (2018-04-15)
 
-To upgrade from ng-formly to @ngx-formly/core see [UPGRADE-2.0](./UPGRADE-2.0.md)
+To upgrade from ng-formly to @ruslanguns/core see [UPGRADE-2.0](./UPGRADE-2.0.md)
 
 <a name="2.0.0-rc.55"></a>
 # [2.0.0-rc.55](https://github.com/ngx-formly/ngx-formly/compare/v2.0.0-rc.54...v2.0.0-rc.55) (2018-04-11)

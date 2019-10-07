@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FieldWrapper } from '@ngx-formly/core';
+import { FieldWrapper } from '@ruslanguns/core';
 
 import { trigger, state, style, transition, animate, group } from '@angular/animations';
 

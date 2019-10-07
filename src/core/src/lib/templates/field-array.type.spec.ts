@@ -2,7 +2,7 @@ import { TestBed } from '@angular/core/testing';
 import { createGenericTestComponent } from '../test-utils';
 import { Component, ViewChild } from '@angular/core';
 import { FormGroup, ReactiveFormsModule } from '@angular/forms';
-import { FormlyModule, FormlyForm } from '@ngx-formly/core';
+import { FormlyModule, FormlyForm } from '@ruslanguns/core';
 import { FieldArrayType } from './field-array.type';
 import { FormlyFieldText } from '../components/formly.field.spec';
 
@@ -24,8 +24,8 @@ describe('Array Field Type', () => {
         FormlyModule.forRoot({
           types: [
             {
-                name: 'input',
-                component: FormlyFieldText,
+              name: 'input',
+              component: FormlyFieldText,
             },
             {
               name: 'array',
@@ -126,4 +126,4 @@ class TestComponent {
     <button id="add" type="button" (click)="add()">Add</button>
   `,
 })
-class ArrayTypeComponent extends FieldArrayType {}
+class ArrayTypeComponent extends FieldArrayType { }

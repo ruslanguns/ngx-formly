@@ -1,4 +1,4 @@
-import { FormlyFieldConfig } from '@ngx-formly/core';
+import { FormlyFieldConfig } from '@ruslanguns/core';
 import { InputAppModule, InputAppComponent, InputExampleConfig } from '../common/input';
 import { TextareaAppModule, TextareaAppComponent, TextareaExampleConfig } from '../common/textarea';
 import { CheckboxAppModule, CheckboxAppComponent, CheckboxExampleConfig } from '../common/checkbox';

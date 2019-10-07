@@ -16,7 +16,7 @@ import { AppComponent } from './app.component';
           examples: [{
             title: 'i18n ngx-translate (alternative)',
             description: `
-              This is an example of an alternative approach of using ngx-formly with ngx-translate to internationalize your forms.
+              This is an example of an alternative approach of using ruslanguns with ngx-translate to internationalize your forms.
               <div>
                 This example demonstrates dynamic i18n using a extension enabling you to to directly work with translation ids.
                 This approach is especially useful if you're sure that you always will use translation ids for your labels and placeholders.

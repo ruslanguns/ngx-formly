@@ -3,7 +3,7 @@ import { RouterModule } from '@angular/router';
 import { CommonModule, CommonExampleConfigs, CommonExampleComponents, debugFields } from '../common';
 
 import { AppComponent } from './app.component';
-import { FormlyIonicModule } from '@ngx-formly/ionic';
+import { FormlyIonicModule } from '@ruslanguns/ionic';
 import { IonicModule } from '@ionic/angular';
 
 import { DatetimeAppModule, DatetimeExampleConfig, DatetimeAppComponent } from './datetime';
@@ -35,7 +35,7 @@ import { ToggleAppModule, ToggleExampleConfig, ToggleAppComponent } from './togg
       },
     ]),
   ],
-  declarations: [ AppComponent ],
+  declarations: [AppComponent],
   entryComponents: [
     AppComponent,
     ...CommonExampleComponents,

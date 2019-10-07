@@ -1,4 +1,4 @@
-import { FormlyFieldConfig } from '@ngx-formly/core';
+import { FormlyFieldConfig } from '@ruslanguns/core';
 import { TranslateService } from '@ngx-translate/core';
 
 export class TranslateExtension {
