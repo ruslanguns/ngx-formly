@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="5.6.0-alpha.0"></a>
+# [5.6.0-alpha.0](https://github.com/ruslanguns/ngx-formly/compare/v5.5.2...v5.6.0-alpha.0) (2019-10-07)
+
+
+### Bug Fixes
+
+* **core:** update ([653cd9a](https://github.com/ruslanguns/ngx-formly/commit/653cd9a))
+
+
+### Features
+
+* **bootstrap:** move types into separate entry points ([ba3d802](https://github.com/ruslanguns/ngx-formly/commit/ba3d802))
+* **core:** mark define fieldComponent optional for custom wrapper ([#1667](https://github.com/ruslanguns/ngx-formly/issues/1667)) ([e59b0b9](https://github.com/ruslanguns/ngx-formly/commit/e59b0b9))
+* **core:** remove deprecated methods and configs ([#1665](https://github.com/ruslanguns/ngx-formly/issues/1665)) ([b8204c3](https://github.com/ruslanguns/ngx-formly/commit/b8204c3))
+* **ionic:** move types into separate entry points ([#1570](https://github.com/ruslanguns/ngx-formly/issues/1570)) ([3e7740c](https://github.com/ruslanguns/ngx-formly/commit/3e7740c))
+* **kendo:** move types into separate entry points ([#1569](https://github.com/ruslanguns/ngx-formly/issues/1569)) ([fb438df](https://github.com/ruslanguns/ngx-formly/commit/fb438df))
+* **primeng:** move types into separate entry points ([#1568](https://github.com/ruslanguns/ngx-formly/issues/1568)) ([6b9d7eb](https://github.com/ruslanguns/ngx-formly/commit/6b9d7eb))
+
+
+
 <a name="5.5.2"></a>
 ## [5.5.2](https://github.com/ngx-formly/ngx-formly/compare/v5.5.1...v5.5.2) (2019-09-23)
 
