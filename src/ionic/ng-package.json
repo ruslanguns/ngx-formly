@@ -5,7 +5,7 @@
   "lib": {
     "entryFile": "src/public_api.ts",
     "externals": {
-      "@ngx-formly/core": "@ruslanguns/core",
+      "@ruslanguns/core": "@ruslanguns/core",
       "@ionic/angular": "@ionic/angular"
     }
   }

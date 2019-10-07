@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormGroup } from '@angular/forms';
-import { FormlyFormOptions, FormlyFieldConfig } from '@ngx-formly/core';
-import { FormlyJsonschema } from '@ngx-formly/core/json-schema';
+import { FormlyFormOptions, FormlyFieldConfig } from '@ruslanguns/core';
+import { FormlyJsonschema } from '@ruslanguns/core/json-schema';
 import { HttpClient } from '@angular/common/http';
 import { tap } from 'rxjs/operators';
 

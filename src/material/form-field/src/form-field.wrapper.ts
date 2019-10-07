@@ -1,5 +1,5 @@
 import { Component, ViewChild, OnInit, OnDestroy, Renderer2, AfterViewInit, AfterContentChecked, TemplateRef, ElementRef } from '@angular/core';
-import { FieldWrapper, ɵdefineHiddenProp as defineHiddenProp, FormlyFieldConfig } from '@ngx-formly/core';
+import { FieldWrapper, ɵdefineHiddenProp as defineHiddenProp, FormlyFieldConfig } from '@ruslanguns/core';
 import { MatFormField } from '@angular/material/form-field';
 import { MatFormFieldControl } from '@angular/material/form-field';
 import { Subject } from 'rxjs';
@@ -50,7 +50,7 @@ interface MatFormlyFieldConfig extends FormlyFieldConfig {
 })
 export class FormlyWrapperFormField extends FieldWrapper<MatFormlyFieldConfig> implements OnInit, OnDestroy, MatFormFieldControl<any>, AfterViewInit, AfterContentChecked {
   // TODO: remove `any`, once dropping angular `V7` support.
-  @ViewChild(MatFormField, <any> { static: true }) formField!: MatFormField;
+  @ViewChild(MatFormField, <any>{ static: true }) formField!: MatFormField;
 
   stateChanges = new Subject<void>();
   _errorState = false;
@@ -75,7 +75,7 @@ export class FormlyWrapperFormField extends FieldWrapper<MatFormlyFieldConfig> i
 
     const fieldComponent = this.formlyField['_componentFactory'];
     if (fieldComponent && !(fieldComponent.componentRef.instance instanceof FieldType)) {
-      console.warn(`Component '${fieldComponent.component.prototype.constructor.name}' must extend 'FieldType' from '@ngx-formly/material'.`);
+      console.warn(`Component '${fieldComponent.component.prototype.constructor.name}' must extend 'FieldType' from '@ruslanguns/material'.`);
     }
 
     // fix for https://github.com/angular/material2/issues/11437

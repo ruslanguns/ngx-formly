@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormArray, FormGroup } from '@angular/forms';
-import { FormlyFormOptions, FormlyFieldConfig } from '@ngx-formly/core';
+import { FormlyFormOptions, FormlyFieldConfig } from '@ruslanguns/core';
 
 export interface StepType {
   label: string;
@@ -68,7 +68,7 @@ export class AppComponent {
   ];
 
   form = new FormArray(this.steps.map(() => new FormGroup({})));
-  options = this.steps.map(() => <FormlyFormOptions> {});
+  options = this.steps.map(() => <FormlyFormOptions>{});
 
   prevStep(step) {
     this.activedStep = step - 1;

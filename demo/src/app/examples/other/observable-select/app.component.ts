@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormGroup } from '@angular/forms';
-import { FormlyFormOptions, FormlyFieldConfig } from '@ngx-formly/core';
+import { FormlyFormOptions, FormlyFieldConfig } from '@ruslanguns/core';
 import { DataService } from './data.service';
 
 @Component({
@@ -25,7 +25,7 @@ export class AppComponent {
     },
   ];
 
-  constructor(private dataService: DataService) {}
+  constructor(private dataService: DataService) { }
 
   submit() {
     alert(JSON.stringify(this.model));

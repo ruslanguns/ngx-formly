@@ -1,4 +1,4 @@
-import { FormlyFieldConfig } from '@ngx-formly/core';
+import { FormlyFieldConfig } from '@ruslanguns/core';
 
 export function addonsExtension(field: FormlyFieldConfig) {
   if (!field.templateOptions || (field.wrappers && field.wrappers.indexOf('addons') !== -1)) {

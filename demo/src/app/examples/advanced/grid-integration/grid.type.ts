@@ -1,5 +1,5 @@
 import { Component, ViewChild, TemplateRef, OnInit } from '@angular/core';
-import { FieldArrayType } from '@ngx-formly/core';
+import { FieldArrayType } from '@ruslanguns/core';
 import { GridOptions } from 'ag-grid-community';
 import { GridFormlyCellComponent } from './grid-formly-cell.component';
 

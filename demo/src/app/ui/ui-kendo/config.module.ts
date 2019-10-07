@@ -4,7 +4,7 @@ import { ExamplesRouterViewerComponent } from '../../shared';
 import { CommonModule, CommonExampleConfigs, CommonExampleComponents, debugFields } from '../common';
 
 import { AppComponent } from './app.component';
-import { FormlyKendoModule } from '@ngx-formly/kendo';
+import { FormlyKendoModule } from '@ruslanguns/kendo';
 
 @NgModule({
   imports: [

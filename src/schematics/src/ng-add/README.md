@@ -6,4 +6,4 @@ Adds Formly and its dependencies and pre-configures the application.
 - Ensure `FormlyModule` is installed and included in root module
 - Adds UI Module theme if passed in options
 
-Command: `ng generate init --collection=@ngx-formly/schematics`
+Command: `ng generate init --collection=@ruslanguns/schematics`

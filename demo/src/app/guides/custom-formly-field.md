@@ -24,7 +24,7 @@ The live example can be found in stackblitz: https://stackblitz.com/edit/ngx-for
 
   ```typescript
   import { Component } from '@angular/core';
-  import { FieldType } from '@ngx-formly/core';
+  import { FieldType } from '@ruslanguns/core';
 
   @Component({
     selector: 'formly-field-input',

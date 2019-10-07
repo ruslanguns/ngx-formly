@@ -20,7 +20,7 @@ describe('ng-add-schematic', () => {
     const packageJson = JSON.parse(getFileContent(tree, '/package.json'));
 
     expect(packageJson.dependencies['@angular/forms']).toBeDefined();
-    expect(packageJson.dependencies['@ngx-formly/core']).toBeDefined();
+    expect(packageJson.dependencies['@ruslanguns/core']).toBeDefined();
   });
 
   it('should not add a theme by default to package.json', () => {
@@ -29,7 +29,7 @@ describe('ng-add-schematic', () => {
 
     // @TODO: list of themes should probably be retrieved from some config file
     ['material', 'bootstrap', 'ionic', 'primeng', 'kendo'].forEach(theme => {
-      expect(packageJson.dependencies[`@ngx-formly/${theme}`]).toBeUndefined();
+      expect(packageJson.dependencies[`@ruslanguns/${theme}`]).toBeUndefined();
     });
   });
 
@@ -38,7 +38,7 @@ describe('ng-add-schematic', () => {
     const tree = schematicRunner.runSchematic('ng-add', options, appTree);
     const packageJson = JSON.parse(getFileContent(tree, '/package.json'));
 
-    expect(packageJson.dependencies['@ngx-formly/core']).toBeUndefined();
+    expect(packageJson.dependencies['@ruslanguns/core']).toBeUndefined();
   });
 
   it('should add to root app module', () => {
@@ -70,7 +70,7 @@ describe('ng-add-schematic', () => {
 
     const packageJson = JSON.parse(getFileContent(tree, '/package.json'));
 
-    expect(packageJson.dependencies['@ngx-formly/bootstrap']).toBeDefined();
+    expect(packageJson.dependencies['@ruslanguns/bootstrap']).toBeDefined();
   });
 
   it('should add UI theme to root app module', () => {

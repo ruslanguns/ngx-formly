@@ -4,7 +4,7 @@ import { ExamplesRouterViewerComponent } from '../../shared';
 import { CommonModule, CommonExampleConfigs, CommonExampleComponents, debugFields } from '../common';
 
 import { AppComponent } from './app.component';
-import { FormlyPrimeNGModule } from '@ngx-formly/primeng';
+import { FormlyPrimeNGModule } from '@ruslanguns/primeng';
 
 @NgModule({
   imports: [
@@ -29,7 +29,7 @@ import { FormlyPrimeNGModule } from '@ngx-formly/primeng';
       },
     ]),
   ],
-  declarations: [ AppComponent ],
+  declarations: [AppComponent],
   entryComponents: [
     AppComponent,
     ...CommonExampleComponents,

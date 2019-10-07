@@ -1,6 +1,6 @@
 {
   "name": "@ruslanguns/common",
-  "version": "5.5.2",
+  "version": "5.6.0-alpha.0",
   "author": "Zama Khan Mohammed <mohammedzamakhan@gmail.com>",
   "contributors": [
     "Zama Khan Mohammed <mohammedzamakhan@gmail.com>",
@@ -23,10 +23,12 @@
     "build:nativescript": "ng build @ruslanguns/nativescript",
     "build:schematics": "cd src/schematics && npm run build && cd ../.. && npm run copy:schematics",
     "copy:schematics": "cpr src/schematics dist/@ruslanguns/schematics --delete-first --filter node_modules/",
-    "release": "standard-version && npm run build && node .config/publish.js",
+    "release": "standard-version --prerelease alpha && npm run build && node .config/publish.js",
     "start": "ng serve --port 4100 --open",
     "demo": "npm run start",
+    "build:demo": "ng build --prod --base-href=\"/ngx-formly/next/\"",
     "deploy": "node .config/deploy.js",
+    "gh-pages": "gh-pages --add --dist dist/app --repo=https://$GH_TOKEN@github.com/ruslanguns/ngx-formly.git",
     "test": "ng test @ruslanguns/core --browsers ChromeHeadless && ng test @ruslanguns/bootstrap --browsers ChromeHeadless && ng test @ruslanguns/material --browsers ChromeHeadless && cd src/schematics && npm run test",
     "test:watch": "ng test @ruslanguns/core --watch",
     "commitmsg": "commitlint -e $GIT_PARAMS",
@@ -47,12 +49,12 @@
   "description": "@ngx-formly is an Angular 2 module which has Components to help customize and render JavaScript/JSON configured forms. The `formly-form` Component and the FormlyConfig service are very powerful and bring unmatched maintainability to your application's forms.",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ngx-formly/ngx-formly.git"
+    "url": "git+https://github.com/ruslanguns/ngx-formly.git"
   },
   "bugs": {
-    "url": "https://github.com/ngx-formly/ngx-formly/issues"
+    "url": "https://github.com/ruslanguns/ngx-formly/issues"
   },
-  "homepage": "https://github.com/ngx-formly/ngx-formly#readme",
+  "homepage": "https://github.com/ruslanguns/ngx-formly#readme",
   "dependencies": {
     "@angular/animations": "^7.2.15",
     "@angular/cdk": "^7.3.7",
